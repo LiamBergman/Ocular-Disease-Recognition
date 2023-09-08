@@ -24,7 +24,7 @@ The dataset consists of 5,000 patient records with 14.4k preprocessed fundus ima
 
 - Fields include:
     - ID: Unique identifier for each record
-    - Patient Age: Age of the patient
+    - Patient Age: The age of the patient
     - Patient Sex: Gender of the patient
     - Left-Fundus: Left eye fundus image filename
     - Right-Fundus: Right eye fundus image filename
@@ -40,7 +40,7 @@ The dataset consists of 5,000 patient records with 14.4k preprocessed fundus ima
     - Normal (N)
     - Diabetes (D)
     - Glaucoma (G)
-    - Cataract \(\C)
+    - Cataract (C)
     - Age-related Macular Degeneration (A)
     - Hypertension (H)
     - Pathological Myopia (M)
@@ -70,10 +70,10 @@ The dataset consists of 5,000 patient records with 14.4k preprocessed fundus ima
 - One-hot encode categorical variables like Patient Sex.
 - Address the filepath and filename columns. They will likely not be needed in the models. filename seems to be redundant. 
 3. Hypothesis for Further Analysis
-- Upon the first pass it seems clear that a hypothesis can be made that as age progresses the likelyhood of ocular disease increases. 
-    - H~0~: Increase of age has no relation to increase in ocular disease. 
-    - H~1~: Increase of age comes with increase likelyhood of ocular disease. 
-- We could also take a look at the relationship of gender on ocular diseases. 
+- Upon the first pass it seems clear that a hypothesis can be made that as age progresses the likelihood of ocular disease increases. 
+    - H0: An increase in age has no relation to an increase in ocular disease. 
+    - H1: An increase in age comes with an increased likelihood of ocular disease. 
+- We could also take a look at the relationship between gender on ocular diseases. 
 4. Extended EDA
 - Perhaps text analysis of the diagnostic keywords columns or more complex interaction effects between variables.
 - Further dive into the age and gender relationships with disease.
@@ -81,4 +81,4 @@ The dataset consists of 5,000 patient records with 14.4k preprocessed fundus ima
 - Identify a set of baseline models to train such as logistic regression. 
 6. Model Evaluation
 - Define the metrics to be used for model evaluation. Accuracy or perhaps more advanced evaluation techniques will need to be used to evaluate potential models. 
-- Identify if it is more important to have a high recall to identify as many disease cases as possible, even at the risk of false positives? Likely better to err on the safe side when it comes to the medical field and allow for doctor intervention (Doctor intervention should be done regardless). 
+- Identify if it is more important to have a high recall to identify as many disease cases as possible, even at the risk of false positives. Likely better to err on the safe side when it comes to the medical field and allow for doctor intervention (Doctor intervention should be done regardless). 
